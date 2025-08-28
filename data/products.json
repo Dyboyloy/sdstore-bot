@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "name": "Windows 11 Pro",
+    "description": "Windows 11 Pro OEM License Key - Genuine and Activated - Instant Delivery",
+    "original_price": 15,
+    "price": 10.5,
+    "image_url": "https://example.com/images/product_a.jpg",
+    "type": "Key",
+    "discount": 30
+  },
+  {
+    "id": 2,
+    "name": "Windows 11 Home",
+    "description": "Windows 11 Home OEM License Key - Genuine and Activated - Instant Delivery",
+    "original_price": 15,
+    "price": 15,
+    "image_url": "https://example.com/images/product_b.jpg",
+    "type": "Key"
+  },
+  {
+    "id": 3,
+    "name": "Microsoft Office 2021 Pro Plus",
+    "description": "Microsoft Office 2021 Pro Plus - Genuine and Activated - Instant Delivery",
+    "original_price": 25,
+    "price": 15,
+    "image_url": "https://example.com/images/product_c.jpg",
+    "type": "Key"
+  },
+  {
+    "id": 4,
+    "name": "Microsoft Office 2019 Pro Plus",
+    "description": "Microsoft Office 2019 Pro Plus - Genuine and Activated - Instant Delivery",
+    "original_price": 25,
+    "price": 15,
+    "image_url": "https://example.com/images/product_d.jpg",
+    "type": "Key"
+  },
+  {
+    "id": 5,
+    "name": "Windows 10 Pro",
+    "description": "Windows 10 Pro OEM License Key - Genuine and Activated - Instant Delivery",
+    "original_price": 15,
+    "price": 10.5,
+    "image_url": "https://example.com/images/product_e.jpg",
+    "type": "Key",
+    "discount": 30
+  }
+]
