@@ -2,6 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const products = require('./data/products.json');
 const fs = require('fs');
 const supabase = require('./supabase');
+const https = require('https');
 require('dotenv').config();
 
 const token = process.env.BOT_TOKEN;
@@ -9,6 +10,9 @@ const adminId = process.env.ADMIN_ID;
 const FILE_PATH = './data/qr.jpg';
 
 const bot = new TelegramBot(token, { polling: true });
+
+// Simple server to keep the bot alive on platforms like Render
+https.createServer((req, res) => res.end('SD Store Bot is running')).listen(process.env.PORT || 3000);
 
 bot.onText(/\/start/, async (msg) => {
     const chatId = msg.chat.id;
@@ -222,7 +226,7 @@ bot.onText(/\/help/, (msg) => {
 bot.onText(/\/info/, (msg) => {
     const chatId = msg.chat.id;
     const infoMessage = `ℹ️ *SD Store Bot Information*\n\n` +
-                        `Version: 1.0.0\n` +
+                        `Version: 1.0.1\n` +
                         `Developer: Longdy\n` +
                         `Contact: @Ouk_Longdy\n\n` +
                         `This bot helps manage product sales and support for SD Store.`;
@@ -304,6 +308,10 @@ bot.on('message', (msg) => {
 bot.on('polling_error', (error) => {
     console.error('Polling error:', error);
 });
+
+bot.on("polling_error", (err) => console.error("Polling error:", err));
+bot.on("webhook_error", (err) => console.error("Webhook error:", err));
+
 
 // Log bot start
 console.log('Bot is running...');
